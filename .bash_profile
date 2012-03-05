@@ -5,6 +5,11 @@ export PATH=${PATH}:~/ruby/rudo/
 # export PATH=${PATH}:/Applications/android-sdks/tools
 export PATH=${PATH}:/Applications/android-sdk-macosx/tools
 
+# modify .bash_history
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+shopt -s histappend
+
 function parse_git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo "("${ref#refs/heads/}")"
@@ -48,8 +53,6 @@ alias gi='gem install --no-rdoc --no-ri'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-[[ -r ~/.bashrc ]] && . ~/.bashrc
-
 ##
 # Your previous /Users/nfowler/.bash_profile file was backed up as /Users/nfowler/.bash_profile.macports-saved_2011-05-18_at_00:41:09
 ##
@@ -57,6 +60,4 @@ alias gi='gem install --no-rdoc --no-ri'
 # MacPorts Installer addition on 2011-05-18_at_00:41:09: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
-
-HISTFILESIZE=2000
 
