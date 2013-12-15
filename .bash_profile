@@ -115,10 +115,8 @@ alias pkill='pkill -i'
 # careful with that axe, Eugene
 alias rmF='rm -rf'
 
-
 # django related changes
 alias manage.py='python manage.py'
-
 
 # MacPorts Installer addition on 2011-05-18_at_00:41:09: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
@@ -139,5 +137,3 @@ function path(){
     printf "%s\n" $PATH
     IFS=$old
 }
-
-
